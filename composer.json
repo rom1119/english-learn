@@ -1,0 +1,13 @@
+{
+    "name": "learning/english",
+    "description": "App to lear english language, this offer eg. make test english words and phrase. (for Polish or english users)",
+    "require": {
+        "php": "^7.1",
+        "symfony/var-dumper": "^4.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\Langs\\": "src/langs/"
+        }
+    }
+}
