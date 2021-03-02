@@ -2,6 +2,8 @@
 namespace App\Langs;
 
 use App\Langs\levels\Fifth;
+use App\Langs\levels\Fourth;
+use App\Langs\levels\Third;
 
 /**
  * Created by PhpStorm.
@@ -16,5 +18,11 @@ class AllLangs {
     public static function getFiveModule(): Fifth {
 
         return new Fifth();
+    }
+    
+    public static function getAll(): array {
+
+
+        return [new Third(), new Fourth(), new Fifth()];
     }
 }
