@@ -69,7 +69,7 @@ class QuizPage extends Page {
             $this->generateRandomQuestion($flatMap);
         }
 
-        $this->randomElIndex = 103;
+        // $this->randomElIndex = 103;
         // foreach($flatMap as $k => $e){
         //     if ($e[0] == 'go with, suit') {
         //         dump($e);
@@ -115,21 +115,23 @@ class QuizPage extends Page {
         echo '<h1><a href="?levelType=">Wróć do wyboru działów</a></h1>';  
 
         echo '<form method="POST">';
-        echo '<h2>Wpisz poprawną odpowiedź w polu</h2>';
         if ($this->randomLang == 'pl') {
-            echo '<h2><b>" ' . $this->questionText . ' "<b></h2>';
+            echo '<h2>Tłumacz na ANGIELSKI</h2>';
+            echo '<h2><b>" ' . $this->questionText . ' "</b></h2>';
 
-            echo '<p>PO ANGIELSKU TO: <input type="text" name="answer" autofocus>';
+            echo '<p><input style="width: 350px;" type="text" name="answer" autofocus></p>';
 
 
         } else {
-            echo '<h2><b>" ' . $this->questionText . ' "<b></h2>';
+            echo '<h2>Tłumacz na POLSKI</h2>';
+
+            echo '<h2><b>" ' . $this->questionText . ' "</b></h2>';
             echo '';
-            echo '<p>PO POLSKU TO: <input type="text" name="answer" autofocus></p>';
+            echo '<p> <input style="width: 350px;" type="text" name="answer" autofocus></p>';
         }
 
         if ($this->valid === false) {
-            echo '<h2 style="color: red;">Odpowiedź niepoprawna ';
+            echo '<h2 style="color: red;">Odpowiedź niepoprawna </h2>';
 
         } else if($this->valid === true) {
             echo '<h2 style="color: green;">Odpowiedź poprawna </h2>';
@@ -138,7 +140,7 @@ class QuizPage extends Page {
             echo '<p><button type="submit">Odpowiedz</button></p>';
         echo '<input type="hidden" name="answerType" value="' . $this->randomLangIndex . '" >';
         echo '<input type="hidden" name="questionIndex" value="' . $this->randomElIndex . '" >';
-        echo '</p>';
+        // echo '</p>';
         echo '</form>';
         echo '</div>';  
 

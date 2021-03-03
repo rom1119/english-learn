@@ -82,7 +82,7 @@ class Fourth
             ['open a shop', 'zakładać, otwierać sklep'],
             ['pay by cash', 'płacić gotówką'],
             ['pay by credit card', 'płacić kartą kredytową'],
-            ['pay by cheque', 'płącić czekiem'],
+            ['pay by cheque', 'płacić czekiem'],
             ['price', 'cena'],
             ['queue', 'kolejka, stać w kolejce'],
             ['receipt', 'paragon'],
