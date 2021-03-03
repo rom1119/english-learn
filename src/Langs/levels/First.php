@@ -199,7 +199,6 @@ class First
             ['go to university', 'iść na studia'],
             ['grow up', 'dorastać'],
             ['have a baby', 'urodzić dziecko, mieć dziecko'],
-            ['have a baby', 'urodzić dziecko'],
             ['give birth', 'urodzić'],
             ['leave home', 'opuszczać dom'],
             ['middle-aged', 'w średnim wieku'],
@@ -210,6 +209,8 @@ class First
             ['start school', 'rozpoczynać naukę w szkole'],
             ['teenager', 'nastolatek'],
             ['youth', 'młodość'],
+            ['thought', 'myśl'],
+            ['pronunciation', 'wymowa'],
     
             
         ],

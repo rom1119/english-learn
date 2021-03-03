@@ -10,6 +10,7 @@ class QuizPage extends Page {
     protected $questionIndex = null;
     protected $questionText = null;
     protected $answer = null;
+    protected $answerCorrectText = null;
     protected $answerType = null;
     protected $levelType = null;
     protected $formSend = false;
@@ -90,13 +91,17 @@ class QuizPage extends Page {
 
     protected function generateQuestionText(array $randomEl) {
         $q = null;
+        $a = null;
         if ($this->randomLang == 'pl') {
             $q = explode(',', $randomEl[1]);
+            $a = $randomEl[0];
         } else {
             $q = explode(',', $randomEl[0]);
-            
+            $a = $randomEl[1];
+
         }
         $this->questionText = trim($q[rand(0, count($q) - 1)]);
+        $this->answerCorrectText = $a;
     }
     protected function generateRandomQuestion(array $flatMap) {
         $this->randomElIndex = rand(0, count($flatMap));
@@ -137,7 +142,13 @@ class QuizPage extends Page {
             echo '<h2 style="color: green;">Odpowiedź poprawna </h2>';
             echo '<p>Oto kolejne pytanie</p>';
         }
-            echo '<p><button type="submit">Odpowiedz</button></p>';
+        echo '<div style="position:relative;"><button  type="submit">Odpowiedz</button>';
+        echo '<div style="position:absolute; right: 0; display:inline;">';
+        echo '<button style="" onclick="document.getElementById(\'correct-answer\').style.display = \'block\';" id="correct-answer-btn" type="button">Sprawdź dostępne odpowiedzi</button>';
+        echo '</br>';
+        echo '<span style="display:none;" id="correct-answer">' . $this->answerCorrectText .'</button>';
+        echo '</div>';
+        echo '</div>';
         echo '<input type="hidden" name="answerType" value="' . $this->randomLangIndex . '" >';
         echo '<input type="hidden" name="questionIndex" value="' . $this->randomElIndex . '" >';
         // echo '</p>';
