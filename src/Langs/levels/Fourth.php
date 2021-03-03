@@ -22,7 +22,7 @@ class Fourth
             ['chemist\'s', 'apteka, drogeria'],
             ['delicatessen', 'delikatesy'],
             ['department store', 'dom towarowy'],
-            ['DIY store', 'sklep z artykułami do wykonywania prac w domu'],
+            ['DIY store', 'sklep z artykułami do wykonywania prac w domu, sklep do domowych prac'],
             ['fishmonger\'s', 'sklep rybny'],
             ['florist\'s', 'kwiaciarnia'],
             ['greengrocer\'s', 'sklep owocowno-warzywny'],

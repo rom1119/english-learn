@@ -2,7 +2,9 @@
 namespace App\Langs;
 
 use App\Langs\levels\Fifth;
+use App\Langs\levels\First;
 use App\Langs\levels\Fourth;
+use App\Langs\levels\Second;
 use App\Langs\levels\Third;
 
 /**
@@ -23,6 +25,6 @@ class AllLangs {
     public static function getAll(): array {
 
 
-        return [new Third(), new Fourth(), new Fifth()];
+        return [new First(), new Second, new Third(), new Fourth(), new Fifth()];
     }
 }
