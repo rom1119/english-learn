@@ -1,11 +1,21 @@
 <?php
 namespace App\Langs;
 
+use App\Langs\levels\Eighth;
+use App\Langs\levels\Eleventh;
 use App\Langs\levels\Fifth;
 use App\Langs\levels\First;
+use App\Langs\levels\Fiveteenth;
 use App\Langs\levels\Fourth;
+use App\Langs\levels\Fourtheenth;
+use App\Langs\levels\Ninth;
 use App\Langs\levels\Second;
+use App\Langs\levels\Seventh;
+use App\Langs\levels\Sixth;
+use App\Langs\levels\Tenth;
+use App\Langs\levels\Theerteenth;
 use App\Langs\levels\Third;
+use App\Langs\levels\Twelfth;
 
 /**
  * Created by PhpStorm.
@@ -25,6 +35,22 @@ class AllLangs {
     public static function getAll(): array {
 
 
-        return [new First(), new Second, new Third(), new Fourth(), new Fifth()];
+        return [
+            new First(), 
+            new Second, 
+            new Third(),
+            new Fourth(),
+            new Fifth(),
+            new Sixth(),
+            new Seventh(),
+            new Eighth(),
+            new Ninth(),
+            new Tenth(),
+            new Eleventh(),
+            new Twelfth(),
+            new Theerteenth(),
+            new Fourtheenth(),
+            new Fiveteenth(),
+        ];
     }
 }

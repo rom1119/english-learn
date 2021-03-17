@@ -2,6 +2,8 @@
 
 namespace App\Langs\levels;
 
+use App\Langs\BaseLevel;
+
 /**
  * Created by PhpStorm.
  * User: Roman Pytka
@@ -9,19 +11,21 @@ namespace App\Langs\levels;
  * Time: 8:23 AM
  */
 
-class Third
+class Third extends BaseLevel
 {
     public $title = 'Dom';
+    public $desc = 'moduł trzeci';
     public $slug = 'house';
     public $data = [
         'types_of_homes' => [
             ['barge', 'barka'],
-            ['bedsitter, studio flat', 'kawalerka'],
+            ['bedsitter, studio flat, studio apartment', 'kawalerka'],
             ['block of flats', 'blok mieszkalny'],
             ['bungalow', 'dom parterowy'],
             ['caravan', 'przyczepa kempingowa'],
             ['castle', 'zamek'],
-            ['chalet', 'dom letniskowy'],
+            ['chalet', 'szalet, toaleta, ubikacja '],
+            ['summer house', 'dom letniskowy'],
             ['cottage', 'domek wiejski'],
             ['detached house', 'dom wolnostojący'],
             ['farmhouse', 'dom w gospodarstwie rolnym'],
@@ -31,7 +35,7 @@ class Third
             ['mansion', 'luksusowa rezydencja'],
             ['palace', 'pałac'],
             ['skyscraper', 'drapacz chmur'],
-            ['terraced house', 'dom szeregowy'],
+            ['terraced house', 'dom szeregowy, dom z tarasem'],
             ['tower block', 'wieżowiec'],
             ['villa', 'willa'],
 
@@ -42,7 +46,7 @@ class Third
             ['shower unit', 'kabina prysznicowa'],
             ['tap', 'kran'],
             ['tiles', 'kafelki'],
-            ['toiled', 'sedes'],
+            ['toiled seat', 'sedes'],
             ['washbasin', 'umywalka'],
             ['washing machine', 'pralka'],
             ['bed', 'łóżko'],
@@ -66,11 +70,12 @@ class Third
             ['kitchen table', 'stół kuchenny'],
             ['microwave', 'kuchenka mikrofalowa'],
             ['oven', 'piekarnik'],
-            ['sink', 'zlew'],
+            ['sink', 'zlew, umywalka'],
             ['armchair', 'fotel'],
             ['coffe table', 'ława'],
             ['fireplace', 'kominek'],
             ['furniture', 'meble'],
+            ['furnishings', 'umeblowanie'],
             ['living room', 'salon'],
             ['settee, sofa, couch', 'kanapa'],
             ['television set', 'telewizor'],
@@ -107,6 +112,7 @@ class Third
             ['courtyard', 'dziedziniec, podwórze'],
             ['doorbell', 'dzwonek u dzwi'],
             ['downstairs', 'na dole'],
+            ['upstairs', 'na górze'],
             ['drive', 'podjazd'],
             ['fence', 'płot'],
             ['floor', 'piętro'],
@@ -140,7 +146,8 @@ class Third
         'location' => [
             ['district', 'dzielnica'],
             ['home town', 'miasto rodzinne'],
-            ['live in the country', 'mieszkać na wsi'],
+            ['live in the country', 'mieszkać w kraju'],
+            ['live in the village', 'mieszkać na wsi'],
             ['live in the suburbs', 'mieszkać na przedmieściach'],
             ['live in a city', 'mieszkać w dużym mieście'],
             ['live in a town', 'mieszkać na małym mieście'],
@@ -164,7 +171,7 @@ class Third
             ['telephone bill', 'rachunek za telefon'],
             ['central heating', 'centralne ogrzewanie'],
             ['estate agent', 'biuro nieruchomości'],
-            ['fitted kitchen', 'kuchnia robiona na wymiar'],
+            ['fitted kitchen', 'kuchnia robiona na wymiar, wyposażona kuchnia'],
             ['flatmate', 'współlokator'],
             ['fully furnished', 'w pełni umeblowany'],
             ['landlord', 'gospodarz domu'],
@@ -198,7 +205,7 @@ class Third
             ['tidy up', 'sprzątać'],
             ['tidy your room', 'sprzątać swój pokój'],
             ['throw away the rubbish', 'wyrzucać śmieci'],
-            ['vaccum', 'odkurzać'],
+            ['vacuum', 'odkurzać'],
          
         ],
 

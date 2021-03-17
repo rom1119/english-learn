@@ -2,6 +2,8 @@
 
 namespace App\Langs\levels;
 
+use App\Langs\BaseLevel;
+
 /**
  * Created by PhpStorm.
  * User: Roman Pytka
@@ -9,9 +11,10 @@ namespace App\Langs\levels;
  * Time: 8:23 AM
  */
 
-class Fourth
+class Fourth extends BaseLevel
 {
     public $title = 'Zakupy i Usługi';
+    public $desc = 'moduł czwarty';
     public $slug = 'shopping-and-services';
     public $data = [
         'kinds_of_shops' => [
@@ -40,7 +43,7 @@ class Fourth
             ['shoe shop', 'sklep obuwniczy'],
             ['sports shop', 'sklep z artykułami sportowymi'],
             ['stationery shop', 'sklep z artykułami papierniczymi'],
-            ['shoping center', 'centrum handlowe'],
+            ['shopping center', 'centrum handlowe'],
             ['supermarket', 'supermarket'],
 
 
@@ -59,17 +62,17 @@ class Fourth
 
         ],
         'shopping_and_using_services' => [
-            ['bargain', 'okazja'],
-            ['search for a bargain', 'data'],
+            ['bargain, chance', 'okazja'],
+            ['search for a bargain', 'szukać okazji'],
             ['book a holiday', 'rezerwować wakacje'],
             ['buy', 'kupować'],
-            ['change', 'reszta'],
+            ['change, rest', 'reszta'],
             ['cheap', 'tani'],
             ['buy online', 'kupować przez internet'],
             ['buy stamps', 'kupować znaczki pocztowe'],
             ['changing, fitting room', 'przymierzalnia'],
             ['checkout', 'kasa w sklepie'],
-            ['close down', 'kończyć działąlność'],
+            ['close down', 'kończyć działalność'],
             ['cost', 'kosztować'],
             ['customer', 'klient'],
             ['discount', 'obniżka'],
@@ -79,7 +82,7 @@ class Fourth
             ['have a haircut', 'ostrzyc się'],
             ['internet shopping', 'zakupy przez internet'],
             ['lift', 'winda'],
-            ['open a shop', 'zakładać, otwierać sklep'],
+            ['open a shop', 'zakładać sklep, otwierać sklep'],
             ['pay by cash', 'płacić gotówką'],
             ['pay by credit card', 'płacić kartą kredytową'],
             ['pay by cheque', 'płacić czekiem'],
@@ -93,7 +96,7 @@ class Fourth
             ['send parcels', 'wysyłać paczki'],
             ['spend money on sth', 'wydawać na coś pieniądze'],
             ['sell', 'sprzedawać'],
-            ['shop assistant', 'sprzedawca'],
+            ['shop assistant', 'sprzedawca w sklepie'],
             ['shopping list', 'lista zakupów'],
             ['special offer', 'promocja, oferta specjalna'],
             ['stall holder', 'właściciel stoiska'],

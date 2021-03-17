@@ -2,6 +2,8 @@
 
 namespace App\Langs\levels;
 
+use App\Langs\BaseLevel;
+
 /**
  * Created by PhpStorm.
  * User: Roman Pytka
@@ -9,9 +11,10 @@ namespace App\Langs\levels;
  * Time: 8:23 AM
  */
 
-class Second
+class Second extends BaseLevel
 {
     public $title = 'Sport';
+    public $desc = 'moduł drugi';
     public $slug = 'sport';
     public $data = [
         'sports' => [
@@ -27,9 +30,9 @@ class Second
             ['gymnastics', 'gimnastyka'],
             ['hockey', 'hokej'],
             ['horse racing', 'wyścigi konne'],
-            ['judo', 'dżugo'],
+            ['judo', 'dżudo'],
             ['jump', 'skok'],
-            ['hight jump', 'skok wzwyż'],
+            ['high jump', 'skok wzwyż'],
             ['long jump', 'skok w dal'],
             ['karate', 'karate'],
             ['kayaking', 'kajakarstwo'],
@@ -117,7 +120,7 @@ class Second
             ['boxer', 'bokser'],
             ['champion', 'mistrz'],
             ['coach', 'trener'],
-            ['contestant, compotitor', 'zawodnik'],
+            ['contestant, competitor', 'zawodnik'],
             ['cyclist', 'kolarz'],
             ['driver', 'kierowca'],
             ['football player', 'piłkarz'],
@@ -143,12 +146,12 @@ class Second
         'adjectives_and_prepositions' => [
             ['adjectives and prepositions', 'przymiotniki i przyimki'],
             ['be bored with sth', 'być czymś znudzonym'],
-            ['be disapointed with sth', 'być czymś rozczarowanym'],
-            ['be crazy about sth', 'mieć bzika na punkcie czegoś'],
+            ['be disappointed with sth', 'być czymś rozczarowanym'],
+            ['be crazy about sth', 'mieć bzika na punkcie czegoś, szaleć za czymś'],
             ['be fond of sb', 'lubić kogoś'],
             ['be interested in sth', 'interesować się czymś'], 
             ['be keen on sth', 'lubić coś'],
-            ['be mad about sb', 'szaleś za kimś'],
+            ['be mad about sb', 'wściekać się na kogoś, szaleć za kimś'],
             ['be scared of sth', 'bać się czegoś'],
 
         ],
@@ -193,7 +196,7 @@ class Second
             ['go cycling', 'uprawiać jazdę na rowerze'],
             ['go sailing', 'uprawiać żeglarstwo'],
             ['go swimming', 'uprawiać pływanie'],
-            ['go wieghtlifting', 'uprawiać podnoszenie ciężarów'],
+            ['go weightlifting', 'uprawiać podnoszenie ciężarów'],
             ['lose a match', 'przegrać mecz'],
             ['lose a race', 'przegrać wyścig'],
             ['break a record', 'pobić rekord'],

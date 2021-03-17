@@ -2,6 +2,8 @@
 
 namespace App\Langs\levels;
 
+use App\Langs\BaseLevel;
+
 /**
  * Created by PhpStorm.
  * User: Roman Pytka
@@ -9,15 +11,16 @@ namespace App\Langs\levels;
  * Time: 8:23 AM
  */
 
-class First
+class First extends BaseLevel
 {
     public $title = 'Życie rodzinne i towarzyskie';
+    public $desc = 'moduł pierwszy';
     public $slug = 'famili-and-social-life';
     public $data = [
         'daily_routines' => [
             ['brush your hair', 'czesać włosy'],
             ['brush your teeth', 'myć zęby'],
-            ['daily routine', 'czynności codzinne'],
+            ['daily routine', 'czynności codzienne'],
             ['do the washing', 'robić pranie'],
             ['do the washing up', 'zmywać'],
             ['wash the dishes', 'zmywać naczynia'],
@@ -32,7 +35,7 @@ class First
             ['go shopping', 'iść na zakupy'],
             ['go to bed', 'iść spać'],
             ['go to school', 'iść do szkoły'],
-            ['got to work', 'iść do pracy'],
+            ['go to work', 'iść do pracy'],
             ['go out', 'wychodzić'],
             ['have a bath', 'kąpać się'],
             ['have a shower', 'brać prysznic'],
@@ -44,7 +47,7 @@ class First
             ['leave for home', 'wychodzić do domu'],
             ['make meals', 'przygotowywać posiłek'],
             ['study', 'uczyć się'],
-            ['take a walk', 'iść na spacer'],
+            ['take a walk, go for a walk', 'iść na spacer'],
             ['take the dog for a walk', 'wyprowadzać psa na spacer'],
             ['send text message', 'wysyłać wiadomość tekstową'],
             ['wake up', 'budzić się'],
@@ -74,7 +77,7 @@ class First
 
         ],
         'leisure_activities' => [
-            ['act', 'działąć, grać w sztuce'],         
+            ['act', 'działać, grać w sztuce'],         
             ['art', 'sztuka'],         
             ['buy', 'kupować'],         
             ['cost', 'koszt, kosztować'],         
@@ -83,8 +86,8 @@ class First
             ['entertainment', 'rozrywka'],         
             ['free time', 'wolny czas'],         
             ['go bowling', 'chodzić na kręgle, iść na kręgle'],         
-            ['go clubing', 'chodzić do klubu'],         
-            ['go tańczyć', 'chodzić potańczyć'],         
+            ['go clubbing', 'chodzić do klubu'],         
+            ['go dancing', 'chodzić potańczyć'],         
             ['go for a walk', 'iść na spacer'],         
             ['go out for a meal', 'wyjść na posiłek'],         
             ['go swimming', 'iść popływać'],         
@@ -92,7 +95,7 @@ class First
             ['go to a disco', 'iść na dyskotekę'],         
             ['go to a party', 'iść na przyjęcie'],         
             ['go to the cinema', 'iść do kina'],         
-            ['leisure activities', 'piłka'],     
+            ['leisure activities', 'zajęcia w czasie wolnym'],     
             ['listen to music', 'słuchać muzyki'],     
             ['meet friends', 'spotykać się z przyjaciółmi'],     
             ['paint', 'malować'],     
@@ -102,7 +105,8 @@ class First
             ['read newspapers', 'czytać gazety'],     
             ['take part in', 'brać udział w'],     
             ['take photographs', 'robić zdjęcia'],     
-            ['watch a video', 'oglądać film'],                 
+            ['watch a video', 'oglądać wideo'],                 
+            ['watch a film', 'oglądać film'],                 
         ],
         'holidays_and_celebrations' => [
             ['anniversary', 'rocznica'],
@@ -142,16 +146,16 @@ class First
             ['cousin', 'kuzyn'],     
             ['daughter', 'córka'],     
             ['daughter-in-law', 'synowa'],     
-            ['famili member', 'członek rodziny'],     
+            ['family member', 'członek rodziny'],     
             ['father', 'ojciec'],     
             ['father-in-law', 'teść'],     
             ['granddaughter', 'wnuczka'],     
             ['grandfather', 'dziadek'],     
             ['grandmother', 'babcia'],     
-            ['great-grantdaughter', 'prawnuczka'],     
-            ['great-grantfather', 'pradziadek'],     
-            ['great-grantmother', 'prababcia'],     
-            ['great-grantson', 'prawnuczek'],     
+            ['great-granddaughter', 'prawnuczka'],     
+            ['great-grandfather', 'pradziadek'],     
+            ['great-grandmother', 'prababcia'],     
+            ['great-grandson', 'prawnuczek'],     
             ['grandson', 'wnuk'],     
             ['husband', 'mąż'],     
             ['mother', 'matka'],     
@@ -160,7 +164,7 @@ class First
             ['niece', 'siostrzenica, bratanica'],     
             ['sister', 'siostra'],     
             ['son', 'syn'],     
-            ['son-in-low', 'zięć'],     
+            ['son-in-law', 'zięć'],     
             ['stepfather', 'ojczym'],     
             ['stepmother', 'macocha'],     
             ['twins', 'bliźniaki'],     
@@ -169,7 +173,7 @@ class First
        
         ],
         'famili_and_social_relationships' => [
-            ['boyfiend', 'chłopak'],
+            ['boyfriend', 'chłopak'],
             ['girlfriend', 'dziwczyna'],
             ['split up with sb', 'rozstawać się z kimś'],
             ['bring sb up', 'wychowywać kogoś'],

@@ -2,6 +2,8 @@
 
 namespace App\Langs\levels;
 
+use App\Langs\BaseLevel;
+
 /**
  * Created by PhpStorm.
  * User: Roman Pytka
@@ -9,9 +11,10 @@ namespace App\Langs\levels;
  * Time: 8:23 AM
  */
 
-class Fifth
+class Fifth extends BaseLevel
 {
     public $title = 'Człowiek';
+    public $desc = 'moduł piąty';
     public $slug = 'human';
     public $data = [
         'personal_details' => [
@@ -26,7 +29,7 @@ class Fifth
             ['first name', 'imię'],
             ['hair colour', 'kolor włosów'],
             ['home town', 'miasto zamieszkania'],
-            ['job', 'zawód'],
+            ['job', 'praca'],
             ['male', 'płeć męska'],
             ['man', 'mężczyzna'],
             ['nationality', 'narodowość'],
@@ -41,7 +44,7 @@ class Fifth
             ['martial status', 'stan cywilny'],
             ['married', 'żonaty'],
             ['single', 'nieżonaty'],
-            ['widower', 'wdowa'],
+            ['widow', 'wdowa'],
             ['widower', 'wdowiec'],
 
         ],
@@ -50,7 +53,7 @@ class Fifth
             ['elderly', 'w podeszłym wieku'],
             ['in his early twenties', 'trochę ponad 20 lat'],
             ['in his late forties', 'przed 50-tką'],
-            ['in his mid thiries', 'około 35 lat'],
+            ['in his mid thirties', 'około 35 lat'],
             ['middle-age', 'w średnim wieku'],
             ['old', 'stary'],
             ['teenager', 'nastolatek'],
@@ -77,12 +80,12 @@ class Fifth
             ['wrinkles', 'zmarszczki'],
             ['eyes', 'oczy'],
             ['blue eyes', 'niebieskie oczy'],
-            ['expressive', 'pełne wyrazu oczy'],
+            ['expressive eyes', 'pełne wyrazu oczy'],
             ['green eyes', 'zielone oczy'],
             ['attractive', 'atrakcyjny'],
             ['beautiful', 'piękny'],
             ['general impression', 'ogólne wrażenie'],
-            ['good-looking', 'atrakcyjny, przystojny'],
+            ['good-looking, attractive', 'atrakcyjny'],
             ['handsome', 'przystojny'],
             ['pretty', 'ładny'],
             ['ugly', 'brzydki'],
@@ -97,7 +100,7 @@ class Fifth
             ['straight hair', 'proste włosy'],
             ['wavy hair', 'falujące włosy'],
             ['white hair', 'siwe włosy'],
-            ['height', 'wzrost'],
+            ['height, increase', 'wzrost'],
             ['medium-height', 'średniego wzrostu'],
             ['tall', 'wysokiego wzrostu'],
             ['short', 'niskiego wzrostu'],
@@ -125,7 +128,8 @@ class Fifth
             ['lazy', 'leniwy'],
             ['lively', 'żywy, żywiołowy'],
             ['loving', 'kochający'],
-            ['mean', 'skąpy, złośliwy'],
+            ['mean', 'złośliwy'],
+            ['stingy, skimpy, miserly', 'skąpy'],
             ['modest', 'skromny'],
             ['open', 'otwarty'],
             ['over-ambitious', 'nadmiernie ambitny'],
@@ -165,7 +169,7 @@ class Fifth
             ['shocked', 'zszokowany'],
             ['surprised', 'zdziwiony'],
             ['tired', 'zmęczony'],
-            ['upset', 'zaniepokojojny'],
+            ['upset', 'zaniepokojojny, zdenerwowany'],
             ['worried', 'zmartwiony'],
             ['worry about sth', 'martwić się czymś'],
             ['be excited about sth', 'być czymś podekscytowanym'],
@@ -186,6 +190,9 @@ class Fifth
             ['stay away from sth', 'trzymać się z dala od czegoś'],
             ['phobia', 'fobia'],
             ['scared', 'przestraszony'],
+            ['blame', 'winić'],
+            ['follow', 'podążać za'],
+            ['take advantage of sb', 'wykorzystywać kogoś'],
 
 
         ]
