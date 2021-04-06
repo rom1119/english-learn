@@ -18,6 +18,8 @@ if (isset($_GET['levelType'])) {
     $levelType = $_GET['levelType'];
 
 }
+
+echo '<link rel="stylesheet" href="./assets/css/style.css" >';
 if ($levelType) {
     $p = new QuizPage($levelType);
 

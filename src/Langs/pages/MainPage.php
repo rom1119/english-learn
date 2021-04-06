@@ -11,7 +11,7 @@ class MainPage extends Page {
         $data = AllLangs::getAll();
 
 
-        echo '<h1>Narzędzie do nauki angielskiego, zapraszamy ...</h1>';
+        echo '<h1 class="kiwi-font">Narzędzie do nauki angielskiego, zapraszamy ...</h1>';
 
         echo '<p>Wybierz jeden z dotępnych działów dla sprawdzenia swojej wiedzy z angielskiego</p>';
         

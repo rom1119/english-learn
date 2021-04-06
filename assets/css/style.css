@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'asdasd';
+    src: url("../fonts/KiwiMaru-Regular.ttf");
+}
+
+.kiwi-font {
+    font-family: asdasd;
+}
