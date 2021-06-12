@@ -53,7 +53,7 @@ class Tenth extends BaseLevel
         ],
         'punishment' => [
             ['capital punishment, death penalty', 'kara śmierci'],
-            ['commmunity service', 'praca społeczna'],
+            ['community service', 'praca społeczna'],
             ['suspended', 'zawieszony'],
             ['get a life sentence', 'dostać dożywocie'],
             ['get a suspended sentence', 'dostać wyrok w zawieszeniu'],
@@ -61,6 +61,7 @@ class Tenth extends BaseLevel
             ['punish sb for sth', 'karać kogoś za coś'],
             ['punishment', 'kara'],
             ['sentence someone to prison', 'skazać kogoś na więzienie'],
+            ['sentence', 'wyrok'],
             
 
         ],
@@ -186,7 +187,7 @@ class Tenth extends BaseLevel
             ['foreign', 'obcy, z innego kraju'],
             ['foreigner', 'obcokrajowiec'],
             ['immigrant', 'imigrant'],
-            ['multicultutalism', 'wielokulturowość'],
+            ['multiculturalism', 'wielokulturowość'],
             ['multicultural', 'wielokulturowy'],
             ['refugee', 'uchodźca'],
             ['society', 'społeczeństwo'],

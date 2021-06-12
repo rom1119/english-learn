@@ -74,7 +74,8 @@ class Ninth extends BaseLevel
             ['feel terrible', 'czuć się okropnie'],
             ['feel weak', 'czuć się słabo'],
             ['feel dizzy', 'mieć zawroty głowy'],
-            ['feel sick', 'mieć mdłości'],
+            ['feel sick', 'źle się czuć , czuć się chory'],
+            ['retch', 'mieć mdłości'],
             ['food poisoning', 'zatrucie pokarmowe'],
             ['have a cold', 'mieć przeziębienie'],
             ['have a cough', 'mieć kaszel'],
@@ -97,9 +98,9 @@ class Ninth extends BaseLevel
             ['swallow', 'połykać'],
             ['swollen glands', 'opuchnięte gruczoły'],
             ['symptom', 'objaw'],
-            ['upset stomache', 'rostrój żąłądka'],
+            ['upset stomach', 'rostrój żąłądka'],
             ['vomit', 'wymioty'],
-            ['twisted', 'ancle'],
+            ['twisted ancle', 'skręcona kostka'],
         
         ],
         'injuries' => [
