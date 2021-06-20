@@ -72,7 +72,7 @@ class Third extends BaseLevel
             ['oven', 'piekarnik'],
             ['sink', 'zlew, umywalka'],
             ['armchair', 'fotel'],
-            ['coffe table', 'ława'],
+            ['coffee table', 'ława'],
             ['fireplace', 'kominek'],
             ['furniture', 'meble'],
             ['furnishings', 'umeblowanie'],

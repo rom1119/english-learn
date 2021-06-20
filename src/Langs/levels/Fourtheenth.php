@@ -83,9 +83,9 @@ class Fourtheenth extends BaseLevel
             ['potato', 'ziemiak'],
             ['tomato', 'pomidor'],
             ['beer', 'piwo'],
-            ['coffe', 'kawa'],
+            ['coffee', 'kawa'],
             ['drink', 'napój'],
-            ['joice', 'sok'],
+            ['juice', 'sok'],
             ['soft drinks', 'napoje bezalkocholowe'],
             ['tea', 'herbata'],
             ['sparkling water', 'woda gazowana'],
@@ -116,21 +116,21 @@ class Fourtheenth extends BaseLevel
             ['bowl of soup', 'miska zupy'],
             ['box of cereal', 'pudełko płatków śniadaniowych'],
             ['carton of milk', 'karton mleka'],
-            ['cup of coffe', 'filiżanka kawy'],
+            ['cup of coffee', 'filiżanka kawy'],
             ['glass of water', 'szklanka wody'],
             ['jar of jam', 'słoik dżemu'],
             ['loaf of bread', 'bochenek chleba'],
-            ['slice of break', 'kromka chleba'],
+            ['slice of bread', 'kromka chleba'],
             ['spoonful of sugar', 'łyżeczka cukru'],
             ['packet of crisps', 'paczka czipsów'],
-            ['piece of fruit', 'owoc'],
+            ['piece of fruit', 'kawałek owocu'],
             ['tub of margarine', 'kostka margaryny'],
             ['tube of tomato puree', 'tubka koncentratu pomidorowego'],
             
 
         ],
         'taste' => [
-            ['biter', 'gorzki'],
+            ['bitter', 'gorzki'],
             ['dry wine', 'wino wytrawne'],
             ['fatty food', 'tłuste jedzenie'],
             ['fresh', 'świeży'],
@@ -230,31 +230,7 @@ class Fourtheenth extends BaseLevel
             ['whisk', 'ubijać'],
         ],
 
-        'charities' => [
-            ['aid', 'pomoc'],
-            ['aid', 'pomoc'],
-            ['aid', 'pomoc'],
-            ['aid', 'pomoc'],
-            ['aid', 'pomoc'],
-            ['aid', 'pomoc'],
-            ['aid', 'pomoc'],
-            ['aid', 'pomoc'],
-
-        ],
-        'charity_organisations' => [
-            ['polish', 'polska'],
-            ['polish', 'polska'],
-            ['polish', 'polska'],
-            ['polish', 'polska'],
-            ['polish', 'polska'],
-            ['polish', 'polska'],
-            ['polish', 'polska'],
-            ['polish', 'polska'],
-            ['polish', 'polska'],
-            ['polish', 'polska'],
-            ['polish', 'polska'],
-            
-        ],
+    
 
     ];
 
