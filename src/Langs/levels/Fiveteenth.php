@@ -52,7 +52,7 @@ class Fiveteenth extends BaseLevel
                 'infinitive'=> 'bid',
                 'past_simple'=> 'bid, bade',
                 'past_participle'=> 'bid, bidden',
-                'polish'=> 'życzyć, licytować',
+                'polish'=> ' licytować',
             ],
             
             'bite' => [
@@ -90,7 +90,7 @@ class Fiveteenth extends BaseLevel
                 'infinitive'=> 'burn',
                 'past_simple'=> 'burnt, burned',
                 'past_participle'=> 'burnt, burned',
-                'polish'=> 'palić, parzyć',
+                'polish'=> 'palić',
             ],
             'buy' => [
                 'infinitive'=> 'buy',
@@ -301,7 +301,7 @@ class Fiveteenth extends BaseLevel
                 'infinitive'=> 'keep',
                 'past_simple'=> 'kept',
                 'past_participle'=> 'kept',
-                'polish'=> 'trzymać',
+                'polish'=> 'trzymać, zachować , dotrzymać',
             ],
             'know' => [
                 'infinitive'=> 'know',
@@ -409,7 +409,7 @@ class Fiveteenth extends BaseLevel
                 'infinitive'=> 'rise',
                 'past_simple'=> 'rose',
                 'past_participle'=> 'rosen',
-                'polish'=> 'rosnąć, wstawać',
+                'polish'=> 'rosnąć, wstawać, podnieść się ',
             ],
             'run' => [
                 'infinitive'=> 'run',
@@ -445,7 +445,7 @@ class Fiveteenth extends BaseLevel
                 'infinitive'=> 'set',
                 'past_simple'=> 'set',
                 'past_participle'=> 'set',
-                'polish'=> 'stawiać, umieszczać',
+                'polish'=> 'nastawić, umieszczać',
             ],
             'shine' => [
                 'infinitive'=> 'shine',

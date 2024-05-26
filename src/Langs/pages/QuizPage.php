@@ -10,6 +10,7 @@ class QuizPage extends Page {
     protected $questionIndex = null;
     protected $questionText = null;
     protected $correctWordsAmount = 0;
+    protected $totalWordsAmount = 0;
     protected $firstAnswerError = true;
     protected $secondAnswerError = true;
     protected $thirdAnswerError = true;
@@ -266,7 +267,7 @@ class QuizPage extends Page {
             echo '<h2 style="color: red;">Odpowiedź niepoprawna </h2>';
 
             if ($this->correctWordsAmount > 0) {
-                echo '<h5 style="color: green;">w towojej odpowiedzi jest <b>' . $this->correctWordsAmount . ' poprawnych słów</b></h5>';
+                echo '<h5 style="color: green;">w towojej odpowiedzi jest <b>' . $this->correctWordsAmount . ' poprawnych słów na ' . $this->totalWordsAmount .' możliwych</b></h5>';
 
             }
 
@@ -294,9 +295,11 @@ class QuizPage extends Page {
         $answerCpArrSec = explode(' ', $answer);
 
         $correctWordsAmount = 0;
+        $checkArr = [];
         // dump($toCheckArr);
         foreach($answerCpArr as $k => $word) {
-            // dump($word);
+            // dump($toCheckArr);
+            // die;
             foreach($toCheckArr as $el) {
                 $el = trim(mb_strtolower($el));
                 $checkArr = explode(' ', $el);
@@ -317,6 +320,7 @@ class QuizPage extends Page {
         }
 
         $this->correctWordsAmount = $correctWordsAmount;
+        $this->totalWordsAmount = count($checkArr);
         // dump($this->correctWordsAmount);
     }
 

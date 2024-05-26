@@ -137,7 +137,7 @@ class Twelfth extends BaseLevel
             ['moon', 'kiężyc'],
             ['orbit', 'orbita'],
             ['planet', 'planeta'],
-            ['revolve around the sun', 'krążyć wokół księżyca'],
+            ['revolve around the sun', 'krążyć wokół słońca'],
             ['satellite', 'satelita'],
             ['solar system', 'układ słoneczny'],
             ['space', 'przestrzeń kosmiczna'],

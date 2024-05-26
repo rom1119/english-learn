@@ -91,7 +91,7 @@ class First extends BaseLevel
             ['go for a walk', 'iść na spacer'],         
             ['go out for a meal', 'wyjść na posiłek'],         
             ['go swimming', 'iść popływać'],         
-            ['go to an concert', 'iść na koncert'],         
+            ['go to a concert', 'iść na koncert'],         
             ['go to a disco', 'iść na dyskotekę'],         
             ['go to a party', 'iść na przyjęcie'],         
             ['go to the cinema', 'iść do kina'],         
