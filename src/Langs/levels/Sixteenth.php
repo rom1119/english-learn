@@ -18,6 +18,7 @@ class Sixteenth extends BaseLevel
     public $slug = 'newest';
     public $data = [
         'food' => [
+            ['promotion', 'awans'],
             ['precision', 'dokładność'],
             ['deposit', 'kaucja'],
             ['compensation', 'odszkodowanie'],
@@ -58,7 +59,7 @@ class Sixteenth extends BaseLevel
             ['key', 'klawisz'],
             ['even', 'równy ,płaski, parzysty'],
             ['odd', 'dziwny, nieparzysty'],
-            ['lead', 'prowdzic, przewodzić, smycz'],
+            ['lead', 'prowadzic, przewodzić, smycz'],
             ['the minutes', 'sprawozdanie, protokół'],
             ['play', 'sztuka teatralna'],
             ['contestant', 'zawodnik, rywal'],
@@ -99,6 +100,29 @@ class Sixteenth extends BaseLevel
             ['peeps, people', 'ludzie, znajomi'],
             ['savory', 'pikantny'],
             ['enclose', 'załączać'],
+
+
+
+
+            ['nail', 'paznokieć, gwóźdź'],
+            ['favor', 'przysługa'],
+            ['obligation', 'obowiązek'],
+            ['nearby', 'w pobliżu'],
+            ['plenty', 'mnóstwo'],
+            ['huge', 'olbrzymi'],
+            ['wandered', 'wędrować'],
+            ['excuse to', 'pretekst'],
+            ['found', 'zakładać'],
+            ['annual', 'coroczny'],
+            ['related', 'powiązana, związana'],
+            ['unfortunate', 'nieszczęśliwe'],
+            ['miserable', 'nieszczęśliwy, biedny, nędzny'],
+            ['due', 'należny'],
+            ['affection', 'uczucie'],
+            ['noun', 'rzeczownik'],
+            ['adjective', 'przymiotnik'],
+            ['verb', 'czasownik'],
+            ['11111', '111111'],
             ['11111', '111111'],
             ['11111', '111111'],
             ['11111', '111111'],

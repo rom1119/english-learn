@@ -18,6 +18,7 @@ use App\Langs\levels\Third;
 use App\Langs\levels\Twelfth;
 use App\Langs\levels\Sixteenth;
 use App\Langs\levels\Seventeenth;
+use App\Langs\levels\Eighteen;
 
 /**
  * Created by PhpStorm.
@@ -55,6 +56,7 @@ class AllLangs {
             new Fiveteenth(),
             new Sixteenth(),
             new Seventeenth(),
+            new Eighteen(),
         ];
     }
 }
