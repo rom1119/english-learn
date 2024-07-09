@@ -17,7 +17,7 @@ class MainPage extends Page {
         
         foreach($data as $el) {
 
-            echo '<p><a href="?levelType='. $el->slug .'">' . $el->title . ' </a><span style="font-size: 1.3em;">' . $el->desc . '</span></p>';
+            echo '<p><a href="?levelType='. $el->slug .'">' . $el->title . ' </a><span style="font-size: 1.3em;">' . '' . '</span></p>';
 
         }
 

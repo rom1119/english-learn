@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Langs\levels;
+namespace App\Langs\levels\SchoolBook;
 
 use App\Langs\BaseLevel;
 

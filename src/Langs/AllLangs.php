@@ -1,24 +1,28 @@
 <?php
 namespace App\Langs;
 
-use App\Langs\levels\Eighth;
-use App\Langs\levels\Eleventh;
-use App\Langs\levels\Fifth;
-use App\Langs\levels\First;
-use App\Langs\levels\Fiveteenth;
-use App\Langs\levels\Fourth;
-use App\Langs\levels\Fourtheenth;
-use App\Langs\levels\Ninth;
-use App\Langs\levels\Second;
-use App\Langs\levels\Seventh;
-use App\Langs\levels\Sixth;
-use App\Langs\levels\Tenth;
-use App\Langs\levels\Theerteenth;
-use App\Langs\levels\Third;
-use App\Langs\levels\Twelfth;
+use App\Langs\levels\SchoolBook\Eighth;
+use App\Langs\levels\SchoolBook\Eleventh;
+use App\Langs\levels\SchoolBook\Fifth;
+use App\Langs\levels\SchoolBook\First;
+use App\Langs\levels\SchoolBook\Fiveteenth;
+use App\Langs\levels\SchoolBook\Fourth;
+use App\Langs\levels\SchoolBook\Fourtheenth;
+use App\Langs\levels\SchoolBook\Ninth;
+use App\Langs\levels\SchoolBook\Second;
+use App\Langs\levels\SchoolBook\Seventh;
+use App\Langs\levels\SchoolBook\Sixth;
+use App\Langs\levels\SchoolBook\Tenth;
+use App\Langs\levels\SchoolBook\Theerteenth;
+use App\Langs\levels\SchoolBook\Third;
+use App\Langs\levels\SchoolBook\Twelfth;
 use App\Langs\levels\Sixteenth;
 use App\Langs\levels\Seventeenth;
 use App\Langs\levels\Eighteen;
+use App\Langs\levels\Nineteen;
+use App\Langs\levels\Twentyth;
+use App\Langs\levels\Twentyfirst;
+use App\Langs\levels\Twentysecond;
 
 /**
  * Created by PhpStorm.
@@ -57,6 +61,10 @@ class AllLangs {
             new Sixteenth(),
             new Seventeenth(),
             new Eighteen(),
+            new Nineteen(),
+            new Twentyth(),
+            new Twentyfirst(),
+            new Twentysecond(),
         ];
     }
 }
