@@ -115,7 +115,6 @@ class Seventeenth extends BaseLevel
             ["paaaaaaaa", "paaaaaaaa"],
             ["paaaaaaaa", "paaaaaaaa"],
             ["paaaaaaaa", "paaaaaaaa"],
-            ["paaaaaaaa", "paaaaaaaa"],
 
    
         ],

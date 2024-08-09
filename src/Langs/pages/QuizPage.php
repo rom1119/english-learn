@@ -34,6 +34,7 @@ class QuizPage extends Page {
 
     public function __construct($levelType)
     {
+        session_start();
         $this->method = $_SERVER['REQUEST_METHOD'];
         $this->levelType = $levelType;
         $this->allModules = AllLangs::getAll();
@@ -43,7 +44,6 @@ class QuizPage extends Page {
                 $this->currentLevel = $mod;
             }
         }
-
         switch($this->method)
         {
             case 'POST':
@@ -60,6 +60,13 @@ class QuizPage extends Page {
                 $this->questionIndex = $_POST['questionIndex'];
                 $this->formSend = true;
                 break;
+            case 'GET':
+                $totalQuestions = 0;
+                foreach ($this->currentLevel->data as $el) {
+                    $totalQuestions += count($el);
+                }
+                $_SESSION["totalQuestions"]=$totalQuestions;
+                $_SESSION["correctAnswers"]=0;
 
             default:
         }   
@@ -76,23 +83,23 @@ class QuizPage extends Page {
         array_map(function($el) use (& $flatMap) {$flatMap = array_merge($flatMap, $el) ;}, $data);
         $flatMap = array_values($flatMap);
         // dump($flatMap);die;
-
-
+        $correctAns = null;
         if ($this->formSend) {
-
+            
             $this->randomElIndex = $this->questionIndex;
             $this->randomLang = $this->langs[$this->answerType];
             $this->randomLangIndex = $this->answerType;
             $this->valid = $this->validateAnswer($flatMap[$this->randomElIndex], $this->randomLang);
+            $correctAns = $flatMap[$this->randomElIndex];
 
+            $this->generateRandomQuestion($flatMap);
             if ($this->valid === true) {
-                $this->generateRandomQuestion($flatMap);
             }
         } else {
 
             $this->generateRandomQuestion($flatMap);
         }
-
+        // var_dump($correctAns);die();
         // $this->randomElIndex = 146;
         // foreach($flatMap as $k => $e){
         //     if ($e[0] == 'plain') {
@@ -105,7 +112,7 @@ class QuizPage extends Page {
         $randomEl = $flatMap[$this->randomElIndex];
 
         $this->generateQuestionText($randomEl);
-        $this->generateHtml($randomEl);
+        $this->generateHtml($randomEl, $correctAns);
 
     }
 
@@ -149,10 +156,10 @@ class QuizPage extends Page {
         $this->randomLang = $this->langs[$r];
     }
 
-    protected function generateHtml(array $randomEl){
+    protected function generateHtml(array $randomEl, $correctAns){
 
         if($this->currentLevel->isBasicQuestion()) {
-            return $this->generateHtmlForBasicQuestion($randomEl);
+            return $this->generateHtmlForBasicQuestion($randomEl, $correctAns);
         }
         
         return $this->generateHtmlForAdvanceQuestion($randomEl);
@@ -235,7 +242,7 @@ class QuizPage extends Page {
         echo '</div>';  
     }
 
-    protected function generateHtmlForBasicQuestion( $var)
+    protected function generateHtmlForBasicQuestion( $var, $correctAnswer)
     {
         echo '<div style="
             margin-left: auto;
@@ -247,12 +254,21 @@ class QuizPage extends Page {
         echo '<a href="?levelType=">Wróć do wyboru modułów</a>';  
         echo '</p>';  
 
+        $totalQ = $_SESSION["totalQuestions"];
+        $correctAns = $_SESSION["correctAnswers"];
+        $accuracy = round($correctAns / ($this->randomElIndex + 1) * 100);
+        $correctMsg = $correctAnswer[1];
         echo '<form method="POST">';
         if ($this->randomLang == 'pl') {
-            echo '<h2>Tłumacz na ANGIELSKI</h2>';
+            echo '<h2>Tłumacz na ANGIELSKI';
+            echo '<p style="display: inline-block; margin-left:100px; width: 180px; font-size:16px;"> <span style="color:green;">' . $correctAns. '/' . $totalQ .' </span>';
+            echo '<span>' . $accuracy . '%</span>';
+            echo '</p>';
+            echo '</h2>';
             echo '<h2><b>" ' . $this->questionText . ' "</b></h2>';
 
             echo '<p><input style="width: 350px;" type="text" name="answer" autofocus autocomplete="off"></p>';
+            $correctMsg = $correctAnswer[0];
 
 
         } else {
@@ -265,6 +281,7 @@ class QuizPage extends Page {
 
         if ($this->valid === false) {
             echo '<h2 style="color: red;">Odpowiedź niepoprawna </h2>';
+            echo '<h5 style="color: green;">poprawna odpowiedzi to <b style="font-weight: bold; color: brown;">' . $correctMsg . ' </b></h5>';
 
             if ($this->correctWordsAmount > 0) {
                 echo '<h5 style="color: green;">w towojej odpowiedzi jest <b>' . $this->correctWordsAmount . ' poprawnych słów na ' . $this->totalWordsAmount .' możliwych</b></h5>';
@@ -324,6 +341,11 @@ class QuizPage extends Page {
         // dump($this->correctWordsAmount);
     }
 
+    protected function incrementCorrectAnswer()
+    {
+        $correctAns = $_SESSION["correctAnswers"];
+        $_SESSION["correctAnswers"] = $correctAns + 1;
+    }
     protected function validateAnswer(array $translateEl, $randomLang)
     {
         
@@ -342,6 +364,7 @@ class QuizPage extends Page {
                foreach($toCheckArr as $el) {
                    $el = trim(mb_strtolower($el));
                    if ($answer === $el) {
+                        $this->incrementCorrectAnswer();
                        return true;
                     }
                 }
@@ -357,6 +380,7 @@ class QuizPage extends Page {
                 // dump(in_array($answer, $toCheckArr, true));
                 foreach($toCheckArr as $el) {
                     if ($answer === trim(mb_strtolower($el))) {
+                        $this->incrementCorrectAnswer();
                         return true;
                     }
                 }
@@ -365,7 +389,6 @@ class QuizPage extends Page {
                 // die;
                 return false;
             }
-        
             return true;
         } else {
             $answer = trim(mb_strtolower($this->answer));
@@ -412,7 +435,12 @@ class QuizPage extends Page {
                 }
                 // $this->detectAnswerCorrectWords($answerCp, $toCheckArr);
                 // die;
-                return !$this->firstAnswerError && !$this->secondAnswerError && !$this->thirdAnswerError;
+                $isvalid = !$this->firstAnswerError && !$this->secondAnswerError && !$this->thirdAnswerError;
+                if ($isvalid) {
+                    $this->incrementCorrectAnswer();
+
+                }
+                return $isvalid;
                 
             } else {
                 $toCheck = trim(mb_strtolower($translateEl['polish']));
@@ -422,6 +450,7 @@ class QuizPage extends Page {
                 // dump(in_array($answer, $toCheckArr, true));
                 foreach($toCheckArr as $el) {
                     if ($answer === trim(mb_strtolower($el))) {
+                        $this->incrementCorrectAnswer();
                         return true;
                     }
                 }
@@ -430,7 +459,6 @@ class QuizPage extends Page {
                 // die;
                 return false;
             }
-        
             return true;
         }
     
