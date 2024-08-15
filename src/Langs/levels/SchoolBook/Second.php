@@ -169,7 +169,7 @@ class Second extends BaseLevel
             ['bronze medal', 'brązowy medal'],
             ['practise', 'trening'],
             ['football practise', 'trening piłkarski'],
-            ['price', 'nagroda'],
+            ['prize', 'nagroda'],
             ['race', 'wyścig, bieg'],
             ['semi-final', 'półfinał'],
             ['sporting event', 'wydarzenie sportowe'],

@@ -24,6 +24,7 @@ class QuizPage extends Page {
     protected $levelType = null;
     protected $formSend = false;
 
+    protected $firstIndex;
     protected $currentLevel;
     protected $randomElIndex = -1;
     protected $randomLang = null;
@@ -61,6 +62,9 @@ class QuizPage extends Page {
                 $this->formSend = true;
                 break;
             case 'GET':
+                $this->questionIndex = $_GET['firstIndex'] - 1;
+                $this->firstIndex = $_GET['firstIndex'] - 1;
+
                 $totalQuestions = 0;
                 foreach ($this->currentLevel->data as $el) {
                     $totalQuestions += count($el);
@@ -109,10 +113,16 @@ class QuizPage extends Page {
 
         //     }
         // }
-        $randomEl = $flatMap[$this->randomElIndex];
+        if (isset($flatMap[$this->randomElIndex])) {
+            $randomEl = $flatMap[$this->randomElIndex];
+            $this->generateQuestionText($randomEl);
+            $this->generateHtml($randomEl, $correctAns);
+            return;
+        }
 
-        $this->generateQuestionText($randomEl);
-        $this->generateHtml($randomEl, $correctAns);
+        $this->generateSummary($correctAns);
+
+
 
     }
 
@@ -149,7 +159,13 @@ class QuizPage extends Page {
 
     }
     protected function generateRandomQuestion(array $flatMap) {
-        $this->randomElIndex++;
+        if($this->firstIndex) {
+            $this->randomElIndex = $this->questionIndex;
+
+        } else {
+            $this->randomElIndex++;
+
+        }
         // $this->randomElIndex = rand(0, count($flatMap) - 1);
         $r = 1;
         $this->randomLangIndex = $r;
@@ -242,6 +258,59 @@ class QuizPage extends Page {
         echo '</div>';  
     }
 
+    protected function generateSummary($correctAnswer)
+    {
+        echo '<div style="
+            margin-left: auto;
+            margin-right: auto;
+            width: 600px;
+        ">';  
+        echo '<p>Odpowiadasz w module  <span style="font-size: 1.3em; font-weight: bold;">"' . $this->currentLevel->title . '"</span>';  
+        echo '<span style="font-size: 1.3em;">' . $this->currentLevel->desc . '</span></br>';  
+        echo '<a href="?levelType=">Wróć do wyboru modułów</a>';  
+        echo '</p>';  
+
+        $totalQ = $_SESSION["totalQuestions"];
+        $correctAns = $_SESSION["correctAnswers"];
+        $accuracy = round($correctAns / ($this->randomElIndex + 1) * 100);
+        $correctMsg = $correctAnswer[1] != null ? $correctAnswer[1] : null ;
+        $correctQuestMsg = $correctAnswer[0] != null ? $correctAnswer[0] : null ;
+        if ($this->randomLang == 'pl') {
+            echo '<h2>Tłumacz na ANGIELSKI';
+            echo '<p style="display: inline-block; margin-left:100px; width: 180px; font-size:16px;"> <span style="color:green;">' . $correctAns. '/' . $totalQ .' </span>';
+            echo '<span>' . $accuracy . '%</span>';
+            echo '</p>';
+            echo '</h2>';
+
+            $correctMsg = $correctAnswer[0] != null ? $correctAnswer[0] : null ;
+            $correctQuestMsg = $correctAnswer[1] != null ? $correctAnswer[1] : null;
+
+
+        } else {
+            echo '<h2>Tłumacz na POLSKI</h2>';
+
+            echo '';
+        }
+
+        if ($this->valid === false) {
+            echo '<h2 style="color: red;">Odpowiedź niepoprawna </h2>';
+            echo '<h5 style="color: green;">poprawna odpowiedzi to: <b style="font-weight: bold; color: red;">' .  $correctQuestMsg .'</b> - <b style="font-weight: bold; color: brown;">' . $correctMsg . ' </b></h5>';
+
+            if ($this->correctWordsAmount > 0) {
+                echo '<h5 style="color: green;">w towojej odpowiedzi jest <b>' . $this->correctWordsAmount . ' poprawnych słów na ' . $this->totalWordsAmount .' możliwych</b></h5>';
+
+            }
+
+        } else if($this->valid === true) {
+            echo '<h2 style="color: green;">Odpowiedź poprawna </h2>';
+        }
+
+
+
+        // echo '</p>';
+        echo '</div>';  
+    }
+
     protected function generateHtmlForBasicQuestion( $var, $correctAnswer)
     {
         echo '<div style="
@@ -257,7 +326,8 @@ class QuizPage extends Page {
         $totalQ = $_SESSION["totalQuestions"];
         $correctAns = $_SESSION["correctAnswers"];
         $accuracy = round($correctAns / ($this->randomElIndex + 1) * 100);
-        $correctMsg = $correctAnswer[1];
+        $correctMsg = $correctAnswer[1] != null ? $correctAnswer[1] : null ;
+        $correctQuestMsg = $correctAnswer[0] != null ? $correctAnswer[0] : null ;
         echo '<form method="POST">';
         if ($this->randomLang == 'pl') {
             echo '<h2>Tłumacz na ANGIELSKI';
@@ -268,7 +338,8 @@ class QuizPage extends Page {
             echo '<h2><b>" ' . $this->questionText . ' "</b></h2>';
 
             echo '<p><input style="width: 350px;" type="text" name="answer" autofocus autocomplete="off"></p>';
-            $correctMsg = $correctAnswer[0];
+            $correctMsg = $correctAnswer[0] != null ? $correctAnswer[0] : null ;
+            $correctQuestMsg = $correctAnswer[1] != null ? $correctAnswer[1] : null;
 
 
         } else {
@@ -281,7 +352,7 @@ class QuizPage extends Page {
 
         if ($this->valid === false) {
             echo '<h2 style="color: red;">Odpowiedź niepoprawna </h2>';
-            echo '<h5 style="color: green;">poprawna odpowiedzi to <b style="font-weight: bold; color: brown;">' . $correctMsg . ' </b></h5>';
+            echo '<h5 style="color: green;">poprawna odpowiedzi to: <b style="font-weight: bold; color: red;">' .  $correctQuestMsg .'</b> - <b style="font-weight: bold; color: brown;">' . $correctMsg . ' </b></h5>';
 
             if ($this->correctWordsAmount > 0) {
                 echo '<h5 style="color: green;">w towojej odpowiedzi jest <b>' . $this->correctWordsAmount . ' poprawnych słów na ' . $this->totalWordsAmount .' możliwych</b></h5>';
