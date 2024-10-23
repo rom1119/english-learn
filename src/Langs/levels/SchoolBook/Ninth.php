@@ -28,7 +28,7 @@ class Ninth extends BaseLevel
             ['ear', 'ucho'],
             ['elbow', 'łokieć'],
             ['eye', 'oko'],
-            ['eybrow', 'brew'],
+            ['eyebrow', 'brew'],
             ['face', 'twarz'],
             ['finger', 'palec u ręki'],
             ['toe', 'palec u nogi'],
@@ -87,7 +87,7 @@ class Ninth extends BaseLevel
             ['hurt', 'boleć'],
             ['i\'ve got an earache', 'mam ból ucha'],
             ['i\'ve got a headache', 'mam ból głowy'],
-            ['i\'ve got a stomach ache', 'mam ból brzucha'],
+            ['i\'ve got a stomachache', 'mam ból brzucha'],
             ['i\'ve got a toothache', 'mam ból zęba'],
             ['ill', 'chory'],
             ['illness', 'choroba'],
@@ -100,7 +100,7 @@ class Ninth extends BaseLevel
             ['symptom', 'objaw'],
             ['upset stomach', 'rostrój żąłądka'],
             ['vomit', 'wymioty'],
-            ['twisted ancle', 'skręcona kostka'],
+            ['twisted ankle', 'skręcona kostka'],
         
         ],
         'injuries' => [

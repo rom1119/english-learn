@@ -23,6 +23,25 @@ use App\Langs\levels\Nineteen;
 use App\Langs\levels\Twentyth;
 use App\Langs\levels\Twentyfirst;
 use App\Langs\levels\Twentysecond;
+use App\Langs\levels\Twentythird;
+use App\Langs\levels\FromCourse\Twentyfourth;
+use App\Langs\levels\FromCourse\Twentyfivth;
+use App\Langs\levels\FromCourse\Twentysix;
+use App\Langs\levels\FromCourse\Twentyseven;
+use App\Langs\levels\FromCourse\Twentyeight;
+use App\Langs\levels\FromCourse\Twentynine;
+use App\Langs\levels\FromCourse\Thirty;
+use App\Langs\levels\FromCourse\Thirtyone;
+use App\Langs\levels\FromCourse\Thirtytwo;
+use App\Langs\levels\FromCourse\Thirtythree;
+use App\Langs\levels\FromCourse\Thirtyfour;
+use App\Langs\levels\FromCourse\Thirtyfive;
+use App\Langs\levels\FromCourse\Thirtysix;
+use App\Langs\levels\FromCourse\Thirtyseven;
+use App\Langs\levels\FromCourse\Thirtyeight;
+use App\Langs\levels\FromCourse\Thirtynine;
+use App\Langs\levels\Phrases\PhrasesB1;
+use App\Langs\levels\Phrases\PhrasesB2;
 
 /**
  * Created by PhpStorm.
@@ -32,12 +51,6 @@ use App\Langs\levels\Twentysecond;
  */
 
 class AllLangs {
-
-
-    public static function getFiveModule(): Fifth {
-
-        return new Fifth();
-    }
     
     public static function getAll(): array {
 
@@ -65,6 +78,25 @@ class AllLangs {
             new Twentyth(),
             new Twentyfirst(),
             new Twentysecond(),
+            new Twentythird(),
+            new Twentyfourth(),
+            new Twentyfivth(),
+            new Twentysix(),
+            new Twentyseven(),
+            new Twentyeight(),
+            new Twentynine(),
+            new Thirty(),
+            new Thirtyone(),
+            new Thirtytwo(),
+            new Thirtythree(),
+            new Thirtyfour(),
+            new Thirtyfive(),
+            new Thirtysix(),
+            new Thirtyseven(),
+            new Thirtyeight(),
+            new Thirtynine(),
+            new PhrasesB2(),
+            new PhrasesB1(),
         ];
     }
 }

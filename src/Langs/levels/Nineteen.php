@@ -85,7 +85,7 @@ class Nineteen extends BaseLevel
             ['crew', 'załoga'],
             ['awkward', 'kłopotliwy, niewygodny'],
             ['straight away', 'natychmiast'],
-            ['light-hearted', 'zabawny, rozrywko wy'],
+            ['light-hearted', 'zabawny, rozrywkowy'],
             ['enchanted', 'zaczarowany'],
             ['engage', 'angażować się, zająć, zgodzić'],
             ['adjust', 'dostosować'],
